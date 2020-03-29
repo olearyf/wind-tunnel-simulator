@@ -1,0 +1,38 @@
+html,body {
+  margin:5px;
+  padding:0px;
+  font-family: "Arial", sans-serif;
+  font-family: 'Roboto Mono', monospace;
+    background-color: #2c2c2e;
+    color: #dcdce3;
+    word-wrap: break-word;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+   width: 1000px;
+}
+a:link{
+    color: #8383a6;
+}
+a:visited{
+    color: #e89b15;
+}
+a:hover{
+    color: #e89b15;
+}
+a:active{
+    color: #8383a6;
+}
+
+#fluid_container {
+  padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: 712px;
+}
+
+.primary-button {
+
+}

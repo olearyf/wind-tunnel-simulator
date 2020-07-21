@@ -35,7 +35,6 @@
 <script type="text/javascript" src="fluid.js"></script>
 <script type="text/javascript">
 
-  // via https://stackoverflow.com/a/18197341/796832
   function download(filename, text) {
     const element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -49,56 +48,14 @@
     document.body.removeChild(element);
   }
 
-  //const downloadVectorFieldButton = document.querySelector('.js-download');
-  /*downloadVectorFieldButton.addEventListener('click', () => {
-    download('vector-field.json', JSON.stringify(fluid.fetchVectorFieldData()));
-  });*/
-
-  //const importVectorFieldButton = document.querySelector('.js-import');
-  /*importVectorFieldButton.addEventListener('change', (e) => {
-    var file = e.target.files[0];
-
-    var reader = new FileReader();
-
-    // Closure to capture the file information.
-    reader.onload = (e) => {
-      fluid.persistVectorFieldData(e.target.result);
-      fluid.initVectorField();
-    }
-
-    reader.readAsText(file);
-  });*/
-
-  /*const resetVelocityButton = document.querySelector('.js-reset-velocities');
-  resetVelocityButton.addEventListener('click', () => {
-    fluid.resetVelocity();
-    fluid.persistVectorFieldData();
-  });*/
-
   const clearPersistedVectorFieldButton = document.querySelector('.js-clear-persisted-vector-field');
   clearPersistedVectorFieldButton.addEventListener('click', () => {
     fluid.clearVectorFieldData();
   });
 
-  /*const showVectorFieldCheckbox = document.querySelector('.js-show-vectory-field');
-  showVectorFieldCheckbox.addEventListener('change', () => {
-    fluid.showVectorField = showVectorFieldCheckbox.matches(':checked');
-  });*/
-
-  /*const frameDraggingCheckbox = document.querySelector('.js-frame-dragging-checkbox');
-  frameDraggingCheckbox.addEventListener('change', () => {
-    fluid.enableFrameDragging = frameDraggingCheckbox.matches(':checked');
-  });*/
-
 
   const vectorCombMagnitudeInput = 5;
   const vectorCombMagnitudeLabelInput = 5;
-  /*const onVectorMagnitudeInputChange = () => {
-    vectorCombMagnitudeLabelInput.innerHTML = parseFloat(vectorCombMagnitudeInput.value);
-    fluid.vectorCombMagnitude = parseFloat(vectorCombMagnitudeInput.value);
-  };
-  vectorCombMagnitudeInput.addEventListener('input', onVectorMagnitudeInputChange);
-  vectorCombMagnitudeInput.addEventListener('change', onVectorMagnitudeInputChange);*/
 
   fluid.init();
 </script>
